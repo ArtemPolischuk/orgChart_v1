@@ -1,0 +1,120 @@
+.orgItem {
+    padding: 10px 10px 15px;
+    width: 300px;
+    display: inline-block;
+    position: relative;
+    border: solid 1px rgb(102, 90, 207);
+    border-radius: 3px;
+    box-shadow: 0 -2px 1px 0 rgba(102, 90, 207, 1);
+
+}
+
+.orgItem-head {
+    display: flex;
+}
+
+.orgItem-head > img {
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+.orgItem-head-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.orgItem-head-heading {
+    font-weight: bold;
+    text-align: start;
+}
+
+.orgItem-head-type {
+    color: #727272;
+    font-size: 14px;
+    text-align: start;
+}
+
+.orgItem-main {
+    margin-top: 15px;
+}
+
+.orgItem-main-item {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.orgItem-main-item > img {
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.orgItem-main-link {
+    margin-left: 25px;
+    font-size: 14px;
+    color: #727272;
+}
+
+.orgItem-main-link:hover {
+    color: #8757bf;
+}
+
+.orgItem-footer {
+    position: absolute;
+    left: -1px;
+    bottom: -15px;
+    width: 300px;
+    background-image: linear-gradient(134deg, #835ead, #4e4c93);
+    border-radius: 2px 2px 3px 3px;
+    box-shadow: 0 -1px 0 1px rgba(102, 90, 207, 0.5);
+}
+
+.orgItem-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.orgItem-options > img {
+    width: 20px;
+    height: 20px;
+}
+
+.orgItem-options:hover .orgItem-options-block{
+    /*transform: translateX(100px);*/
+    visibility: visible;
+}
+
+.orgItem-options-block {
+    width: 100px;
+    height: 132px;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: -1px;
+    right: -100px;
+    border: solid 1px rgb(102, 90, 207);
+    box-shadow: 0 -2px 1px 0 rgba(102, 90, 207, 1);
+    background-color: #fff;
+    /*transition: all 0.2s ease-out;*/
+    /*right: 0px;*/
+    z-index: 1;
+}
+
+.orgItem-options-block > span {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 14px;
+}
+
+.orgItem-options-block > span:hover {
+    color: rgb(102, 90, 207);
+}
