@@ -46,6 +46,13 @@
     width: 50%;
 }
 
+#initechOrgChart {
+    margin-top: 200px;
+    margin-left: 200px;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+
+}
 
 #initechOrgChart .orgNodeChildGroup .nodeGroupLineVerticalMiddle {
     /*border-right: solid 2px rgb(187, 187, 187);*/

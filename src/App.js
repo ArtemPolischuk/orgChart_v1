@@ -23,6 +23,9 @@ class App extends Component {
         parentId: Number,
         itemTypes: [
             {
+                name: 'Типи структур',
+            },
+            {
                 name: 'Управління',
             },
             {
