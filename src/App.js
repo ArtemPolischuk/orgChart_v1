@@ -13,14 +13,25 @@ import 'react-orgchart/index.css';
 
 class App extends Component {
     state = {
-        isModalOpen: false,
+        isNameEmpty: false,
+        isTypeEmpty: false,
         isItemEditing: false,
         isItemCreating: false,
         currentId: Number,
         currentName: '',
         itemName: '',
         parentId: Number,
-        itemTypes: ['міністерство','організація'],
+        itemTypes: [
+            {
+                name: 'Управління',
+            },
+            {
+                name: 'Департамент',
+            },
+            {
+                name: 'Відділ',
+            },
+        ],
         itemType: '',
         location: 'Kyivska 12, Kyiv, 011001',
         head: {
@@ -33,7 +44,7 @@ class App extends Component {
             id: 100,
             name: "Main Dep ",
             location: 'Kyivska 12, Kyiv, 011001',
-            type: 'організація',
+            type: 'Управління',
             head: {
                 full_name: "Випадкове ім'я",
                 phone: '+38 099 925 52 12',
@@ -46,9 +57,9 @@ class App extends Component {
                 {
                     id: 200,
                     parent: 100,
-                    name: "Dep 200",
+                    name: "Департамент 200",
                     location: 'Kyivska 12, Kyiv, 011001',
-                    type: 'організація',
+                    type: 'Департамент',
                     head: {
                         full_name: "Випадкове ім'я",
                         phone: '+38 099 925 52 12',
@@ -57,13 +68,13 @@ class App extends Component {
                     },
                     vacancies: 20,
                     employees: 34,
-                    children: [
+                    hiddenChildren: [
                         {
                             id: 210,
                             parent: 200,
-                            name: "Dep 201",
+                            name: "Відділ 201",
                             location: 'Kyivska 12, Kyiv, 011001',
-                            type: 'організація',
+                            type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
                                 phone: '+38 099 925 52 12',
@@ -76,9 +87,9 @@ class App extends Component {
                         {
                             id  : 220,
                             parent: 200,
-                            name: "Dep 202",
+                            name: "Відділ 202",
                             location: 'Kyivska 12, Kyiv, 011001',
-                            type: 'організація',
+                            type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
                                 phone: '+38 099 925 52 12',
@@ -87,13 +98,13 @@ class App extends Component {
                             },
                             vacancies: 20,
                             employees: 34,
-                            children: [
+                            hiddenChildren: [
                                 {
                                     id: 221,
                                     parent: 220,
-                                    name: "tolya",
+                                    name: "Відділ 221",
                                     location: 'Kyivska 12, Kyiv, 011001',
-                                    type: 'організація',
+                                    type: 'Відділ',
                                     head: {
                                         full_name: "Випадкове ім'я",
                                         phone: '+38 099 925 52 12',
@@ -106,9 +117,9 @@ class App extends Component {
                                 {
                                     id: 222,
                                     parent: 220,
-                                    name: "molya",
+                                    name: "Відділ 222",
                                     location: 'Kyivska 12, Kyiv, 011001',
-                                    type: 'організація',
+                                    type: 'Відділ',
                                     head: {
                                         full_name: "Випадкове ім'я",
                                         phone: '+38 099 925 52 12',
@@ -125,9 +136,9 @@ class App extends Component {
                 {
                     id: 300,
                     parent: 100,
-                    name: "Dep 300",
+                    name: "Департамент 300",
                     location: 'Kyivska 12, Kyiv, 011001',
-                    type: 'організація',
+                    type: 'Департамент',
                     head: {
                         full_name: "Випадкове ім'я",
                         phone: '+38 099 925 52 12',
@@ -136,13 +147,13 @@ class App extends Component {
                     },
                     vacancies: 20,
                     employees: 34,
-                    children: [
+                    hiddenChildren: [
                         {
                             id: 310,
                             parent: 300,
-                            name: "Dep 310",
+                            name: "Відділ 310",
                             location: 'Kyivska 12, Kyiv, 011001',
-                            type: 'організація',
+                            type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
                                 phone: '+38 099 925 52 12',
@@ -155,9 +166,9 @@ class App extends Component {
                         {
                             id: 320,
                             parent: 300,
-                            name: "Dep 320",
+                            name: "Відділ 320",
                             location: 'Kyivska 12, Kyiv, 011001',
-                            type: 'організація',
+                            type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
                                 phone: '+38 099 925 52 12',
@@ -172,9 +183,9 @@ class App extends Component {
                 {
                     id: 400,
                     parent: 100,
-                    name: "Dep 400",
+                    name: "Департамент 400",
                     location: 'Kyivska 12, Kyiv, 011001',
-                    type: 'організація',
+                    type: 'Департамент',
                     head: {
                         full_name: "Випадкове ім'я",
                         phone: '+38 099 925 52 12',
@@ -249,6 +260,16 @@ class App extends Component {
               } = this.state;
         console.log('itemName,itemType,parentId,location,head: ', itemName,itemType,currentId,location,head);
 
+        if(!itemName.trim()) {
+            this.setState({isNameEmpty: true});
+            return null;
+        } else { this.setState({isNameEmpty: false}) }
+
+        if(!itemType.trim()) {
+            this.setState({isTypeEmpty: true});
+            return null;
+        } else { this.setState({isTypeEmpty: false}) }
+
         const newItem = {
             id: Math.random(),
             parent: currentId,
@@ -294,6 +315,8 @@ class App extends Component {
 
         this.setState({
             orgTree: handleOrgTree,
+            isNameEmpty: false,
+            isTypeEmpty: false,
             parentId: Number,
             currentName: '',
             currentId: '',
@@ -393,6 +416,8 @@ class App extends Component {
         this.setState({
             isItemEditing: false,
             isItemCreating: false,
+            isTypeEmpty: false,
+            isNameEmpty: false,
             parentId: Number,
             currentName: '',
             currentId: '',
@@ -477,25 +502,26 @@ class App extends Component {
         const {
             isItemCreating,
             isItemEditing,
+            isNameEmpty,
+            isTypeEmpty,
             orgTree,
-            currentName,
             itemTypes,
             itemName,
             itemType,
             location,
             head,
         } = this.state;
-
+        
         const headerJSX = isItemCreating
-            ? `Створення дочірньої установи « ${currentName} »`
-            : `Редагування установи « ${currentName} »`;
+            ? `Створення дочірньої установи`
+            : `Редагування установи`;
             // ? `створення дочірньої установи « ${currentName} »`
             // : `редагування установи « ${currentName} »`;
 
         const optionsJSX = itemTypes.map((type) => {
             const key = Math.random();
 
-            return <option value={type} key={key}>{type}</option>
+            return <option value={type.name} key={key}>{type.name}</option>
         });
 
         const buttonJSX = isItemCreating
@@ -520,20 +546,22 @@ class App extends Component {
                         <div className="modal-content">
                             <h1>{headerJSX}</h1>
                             <div className='modal-input-wrapper'>
+                                {isNameEmpty && <span>Введіть назву установи</span>}
                                 <label htmlFor="itemName">Назва установи</label>
                                 <input
                                     type="text"
                                     id="itemName"
                                     value={itemName}
-                                    className='modal-input'
+                                    className={`modal-input ${isNameEmpty && 'modal-input-error'}`}
                                     onChange={this._handleItemName}
                                 />
                             </div>
                             <div className='modal-input-wrapper'>
+                                {isTypeEmpty && <span>Оберіть тип установи</span>}
                                 <label htmlFor="itemType">Тип установи</label>
                                 <select
                                     id="itemType"
-                                    className="modal-input"
+                                    className={`modal-input ${isTypeEmpty && 'modal-input-error'}`}
                                     value={itemType}
                                     onChange={this._handleItemType}
                                 >

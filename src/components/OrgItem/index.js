@@ -65,13 +65,14 @@ export default (
                 }}>
                     редагувати
                 </span>
+
+                {node.parent &&
                 <span onClick={()=> {
                     console.log('node: ', node);
                     _deleteItem(node.id, node.parent);
                 }}>
                     видалити
-                </span>
-
+                </span>}
                 </div>
             </div>
 

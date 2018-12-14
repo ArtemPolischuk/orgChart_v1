@@ -102,6 +102,7 @@
 }
 
 .orgItem-options-block {
+    padding: 10px;
     width: 100px;
     height: 132px;
     position: absolute;

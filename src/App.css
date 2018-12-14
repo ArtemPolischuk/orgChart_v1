@@ -14,16 +14,24 @@ label {
 
 .modal-content > h1 {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   word-break: break-word;
   text-align: center;
 }
 
 .modal-input-wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.modal-input-wrapper > span {
+  top: -25px;
+  left: 180px;
+  position: absolute;
+  color: red;
 }
 
 .modal-input {
@@ -35,8 +43,11 @@ label {
   border-radius: 5px;
   background-color: #f3f3f3;
   border: 1px solid #cfcfcf;
-  transition: .5s;
   appearance: none;
+}
+
+.modal-input-error {
+  border: 1px solid red;
 }
 
 .modal-input:focus {
