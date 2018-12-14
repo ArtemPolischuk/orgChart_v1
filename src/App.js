@@ -268,7 +268,7 @@ class App extends Component {
             return null;
         } else { this.setState({isNameEmpty: false}) }
 
-        if(!itemType.trim()) {
+        if(!itemType.trim() || itemType === 'Типи структур') {
             this.setState({isTypeEmpty: true});
             return null;
         } else { this.setState({isTypeEmpty: false}) }
