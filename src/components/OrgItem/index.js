@@ -6,8 +6,8 @@ import React from 'react';
 import employeesIcon from '../../employees.svg';
 import vacanciesIcon from '../../vacancies.svg';
 // import arrowUpIcon from '../../arrowUp.svg';
-import dotsIcon from '../../dots.svg';
-import userIcon from '../../user.svg';
+import dotsIcon from '../../dots2.svg';
+import userIcon from '../../userGrey.svg';
 import arrowUpIcon from '../../arrowUp2.svg'
 import arrowDownIcon from '../../arrowDown2.svg'
 
