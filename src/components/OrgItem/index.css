@@ -1,11 +1,11 @@
 .orgItem {
     padding: 10px 10px 15px;
+    margin: 0 10px;
     width: 300px;
     display: inline-block;
     position: relative;
     border: solid 1px #f0f0f0;
     border-radius: 3px;
-
 }
 
 .orgItem-head {

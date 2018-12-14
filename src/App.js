@@ -42,7 +42,7 @@ class App extends Component {
         },
         orgTree: {
             id: 100,
-            name: "Main Dep ",
+            name: "Головний департамент",
             location: 'Kyivska 12, Kyiv, 011001',
             type: 'Управління',
             head: {

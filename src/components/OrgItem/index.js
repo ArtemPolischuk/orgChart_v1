@@ -26,13 +26,16 @@ export default (
         node,
     }) => {
 
+
+    const name = node.name.length >= 21 ? node.name.substr(0,17) + '...' : node.name;
+
     return (
         <div className="orgItem" >
             <div className="orgItem-head">
                 <img src={userIcon} alt="userIcon"/>
 
                 <div className="orgItem-head-info">
-                    <span className="orgItem-head-heading">{node.name}</span>
+                    <span className="orgItem-head-heading">{name}</span>
                     <span className="orgItem-head-type">Тип структури: {node.type}</span>
                 </div>
             </div>
