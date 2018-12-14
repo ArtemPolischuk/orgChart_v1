@@ -29,7 +29,7 @@ label {
 
 .modal-input-wrapper > span {
   top: -25px;
-  left: 180px;
+  right: 0;
   position: absolute;
   color: red;
 }
