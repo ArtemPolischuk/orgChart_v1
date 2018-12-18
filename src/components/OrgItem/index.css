@@ -5,14 +5,18 @@
     display: inline-block;
     position: relative;
     border: solid 1px #f0f0f0;
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
+}
+
+.orgItem:hover .orgItem-increased {
+    display: block;
 }
 
 .orgItem-head {
     display: flex;
 }
 
-.orgItem-head > img {
+.orgItem-head-img {
     margin-right: 10px;
     width: 45px;
     height: 45px;
@@ -21,15 +25,17 @@
 .orgItem-head-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
 }
 
 .orgItem-head-heading {
+    margin-top: 5px;
     font-weight: bold;
     text-align: start;
 }
 
 .orgItem-head-type {
+    margin-top: 2px;
     color: #727272;
     font-size: 14px;
     text-align: start;
@@ -63,12 +69,12 @@
 
 .orgItem-footer {
     position: absolute;
-    height: 11px;
+    height: 13px;
     left: -1px;
-    bottom: -10px;
+    bottom: -12px;
     width: 300px;
     background-color: #f0f0f0;
-    border-radius: 2px 2px 3px 3px;
+    border-radius: 0 0 3px 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,4 +134,22 @@
 
 .orgItem-options-block > span:hover {
     color: rgb(102, 90, 207);
+}
+
+.orgItem-increased {
+    padding: 20px;
+    left: -70px;
+    bottom: 0;
+    position: absolute;
+    display: none;
+    width: 440px;
+    height: 229px;
+    border: 1px solid black;
+    background: white;
+}
+
+.orgItem-increased-img {
+    margin-right: 12px;
+    min-width: 75px;
+    min-height: 75px;
 }
