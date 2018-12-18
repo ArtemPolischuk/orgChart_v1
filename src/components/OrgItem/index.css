@@ -14,6 +14,7 @@
 
 .orgItem-head {
     display: flex;
+    align-items: center;
 }
 
 .orgItem-head-img {
@@ -143,6 +144,7 @@
 }
 
 .orgItem-L {
+    pointer-events: none;
     padding: 20px;
     left: -70px;
     bottom: 0;
@@ -157,14 +159,14 @@
 }
 
 .orgItem-L-head-type {
-    margin-top: 2px;
+    margin-top: 5px;
     color: #727272;
     font-size: 16px;
     text-align: start;
 }
 
 .orgItem-L-img {
-    margin-right: 12px;
+    margin-right: 20px;
     min-width: 75px;
     min-height: 75px;
 }
