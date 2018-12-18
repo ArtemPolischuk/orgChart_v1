@@ -33,6 +33,33 @@ export default (
         <div className="orgItem" >
             <div className="orgItem-head">
                 <img src={userIcon} alt="userIcon" className="orgItem-head-img"/>
+                <div className="orgItem-L" id="l">
+                    <div className="orgItem-head">
+                        <img src={userIcon} alt="userIcon" className='orgItem-L-img'/>
+                        <div className="orgItem-head-info">
+                            <span className="orgItem-head-heading">{node.name}</span>
+                            <span className="orgItem-L-head-type">Тип структури: {node.type}</span>
+                        </div>
+                    </div>
+                    <div className="orgItem-L-main">
+                        <div className="orgItem-L-info">
+                            <span className="orgItem-staticData">Керівник</span>
+                            <span className='orgItem-data'>{node.head.full_name}</span>
+                        </div>
+                        <div className="orgItem-L-info">
+                            <span className="orgItem-staticData">Адреса</span>
+                            <span className='orgItem-data'>{node.location}</span>
+                        </div>
+                        <div className="orgItem-L-info">
+                            <span className="orgItem-staticData">Електронна адреса</span>
+                            <span className='orgItem-data'>{node.head.email}</span>
+                        </div>
+                        <div className="orgItem-L-info">
+                            <span className="orgItem-staticData">Телефон</span>
+                            <span className='orgItem-data'>{node.head.phone}</span>
+                        </div>
+                    </div>
+                </div>
                 <div className="orgItem-head-info">
                     <span className="orgItem-head-heading">{name}</span>
                     <span className="orgItem-head-type">Тип структури: {node.type}</span>
@@ -97,36 +124,35 @@ export default (
                     alt="arrowDownIcon"
                 />
             </div>}
-
-            <div className="orgItem-increased">
-                <div className="orgItem-head">
-                    <img src={userIcon} alt="userIcon" className='orgItem-increased-img'/>
-                    <div className="orgItem-head-info">
-                        <span className="orgItem-head-heading">{node.name}</span>
-                        <span className="orgItem-head-type">Тип структури: {node.type}</span>
-                    </div>
-                </div>
-                <div className="orgItem-main">
-                    <div className="orgItem-main-item">
-                        <img src={employeesIcon} alt="userIcon"/>
-                        <a href="#" className="orgItem-main-link">Працівників {node.employees}</a>
-                    </div>
-                    <div className="orgItem-main-item">
-                        <img src={vacanciesIcon} alt="userIcon"/>
-                        <a href="#" className="orgItem-main-link">Вакансій {node.vacancies}</a>
-                    </div>
-                    <div className="orgItem-main-item">
-                        <span>Адреса</span>
-                    </div>
-                    <div className="orgItem-main-item">
-                        <span>Електронна адреса</span>
-                    </div>
-                    <div className="orgItem-main-item">
-                        <span>Телефон</span>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 };
 
+// (
+//     <div className="orgItem-L" id="l">
+//         <div className="orgItem-head">
+//             <img src={userIcon} alt="userIcon" className='orgItem-L-img'/>
+//             <div className="orgItem-head-info">
+//                 <span className="orgItem-head-heading">{node.name}</span>
+//                 <span className="orgItem-L-head-type">Тип структури: {node.type}</span>
+//             </div>
+//         </div>
+//         <div className="orgItem-L-main">
+//             <div className="orgItem-L-info">
+//                 <span className="orgItem-staticData">Керівник</span>
+//                 <span className='orgItem-data'>{node.head.full_name}</span>
+//             </div>
+//             <div className="orgItem-L-info">
+//                 <span className="orgItem-staticData">Адреса</span>
+//                 <span className='orgItem-data'>{node.location}</span>
+//             </div>
+//             <div className="orgItem-L-info">
+//                 <span className="orgItem-staticData">Електронна адреса</span>
+//                 <span className='orgItem-data'>{node.head.email}</span>
+//             </div>
+//             <div className="orgItem-L-info">
+//                 <span className="orgItem-staticData">Телефон</span>
+//                 <span className='orgItem-data'>{node.head.phone}</span>
+//             </div>
+//         </div>
+// )

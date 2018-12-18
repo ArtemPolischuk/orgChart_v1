@@ -400,7 +400,7 @@ class OrgStructure extends Component {
             : <button onClick={this._editItem} className='modal-button'>Редагувати</button>;
 
         return (
-            <div id='initechOrgChart'>
+            <div id='orgStructure'>
                 <OrgChart
                     tree={orgTree}
                     NodeComponent={OrgItem}
