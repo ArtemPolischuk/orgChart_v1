@@ -6,6 +6,15 @@ label {
     display: inline-block;
 }
 
+option:first-child {
+    display: none;
+}
+
+
+.modal-content > p {
+    text-align: center;
+    margin-bottom: 35px;
+}
 .modal-content > h1 {
     font-size: 24px;
     margin-bottom: 35px;
@@ -51,11 +60,11 @@ label {
 }
 
 .modal-footer {
-    margin: 0 auto;
-    /*margin-left: auto;*/
-    display: flex;
-    width: 30%;
-    justify-content: space-between;
+    text-align: center;
+}
+
+.modal-button:first-child {
+    margin-right: 10px;
 }
 
 .modal-button {
@@ -70,3 +79,11 @@ label {
     color: #f3f3f3;
     background-color: #665acf;
 }
+
+/*{*/
+    /*margin-left: auto;*/
+    /*display: flex;*/
+    /*width: 30%;*/
+    /*justify-content: space-between;*/
+/*}*/
+

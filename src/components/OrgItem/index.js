@@ -20,9 +20,10 @@ export default (
         _showChildrenNodes,
         _setForCreation,
         _setForEditing,
+        _setForRemoving,
         _toggleItemCreation,
         _toggleItemEditing,
-        _deleteItem,
+        _toggleItemRemoving,
         node,
     }) => {
 
@@ -33,7 +34,7 @@ export default (
         <div className="orgItem" >
             <div className="orgItem-head">
                 <img src={userIcon} alt="userIcon" className="orgItem-head-img"/>
-                <div className="orgItem-L" id="l">
+                <div className="orgItem-L">
                     <div className="orgItem-head">
                         <img src={userIcon} alt="userIcon" className='orgItem-L-img'/>
                         <div className="orgItem-head-info">
@@ -98,7 +99,8 @@ export default (
                 {node.parent &&
                 <span onClick={()=> {
                     console.log('node: ', node);
-                    _deleteItem(node.id, node.parent);
+                    _setForRemoving(node.id, node.parent);
+                    _toggleItemRemoving();
                 }}>
                     видалити
                 </span>}

@@ -20,6 +20,7 @@ class OrgStructure extends Component {
         isTypeEmpty: false,
         isItemEditing: false,
         isItemCreating: false,
+        isItemRemoving: false,
         currentId: Number,
         currentName: '',
         itemName: '',
@@ -213,6 +214,10 @@ class OrgStructure extends Component {
         this.setState(({isItemEditing}) => ({isItemEditing: !isItemEditing}))
     };
 
+    _toggleItemRemoving = () => {
+        this.setState(({isItemRemoving}) => ({isItemRemoving: !isItemRemoving}));
+    };
+
     _setForCreation = (id, name,) => {
         console.log('id, name: ', id, name);
         this.setState({
@@ -228,6 +233,13 @@ class OrgStructure extends Component {
             itemName: name,
             itemType: type,
             currentId: id,
+        })
+    };
+
+    _setForRemoving = (currentId, parentId) => {
+        this.setState({
+            currentId,
+            parentId,
         })
     };
 
@@ -264,7 +276,6 @@ class OrgStructure extends Component {
                   orgTree,
                   head,
               } = this.state;
-        // console.log('itemName,itemType,parentId,location,head: ', itemName,itemType,currentId,location,head);
 
         if(!itemName.trim()) {
             this.setState({isNameEmpty: true});
@@ -322,18 +333,18 @@ class OrgStructure extends Component {
         this._toggleItemEditing();
     };
 
-    _deleteItem = (id, parent) => {
-        console.log('id: ', id);
-        console.log('parent: ', parent);
-        const { orgTree } = this.state;
 
+    _removeItem = () => {
+        const { orgTree, currentId, parentId } = this.state;
         const handleOrgTree = {...orgTree};
 
-        removeItem(parent, handleOrgTree, id);
-
+        removeItem(parentId, handleOrgTree, currentId);
         this.setState({
             orgTree: handleOrgTree,
+            currentId: '',
+            parentId: '',
         });
+        this._toggleItemRemoving();
     };
 
     _cancel = () => {
@@ -371,6 +382,7 @@ class OrgStructure extends Component {
     render() {
         const {
                   isItemCreating,
+                  isItemRemoving,
                   isItemEditing,
                   isNameEmpty,
                   isTypeEmpty,
@@ -406,11 +418,12 @@ class OrgStructure extends Component {
                     NodeComponent={OrgItem}
                     _setForCreation={this._setForCreation}
                     _setForEditing={this._setForEditing}
+                    _setForRemoving={this._setForRemoving}
                     _toggleItemCreation={this._toggleItemCreation}
                     _hideChildrenNodes={this._hideChildrenNodes}
                     _showChildrenNodes={this._showChildrenNodes}
                     _toggleItemEditing={this._toggleItemEditing}
-                    _deleteItem={this._deleteItem}
+                    _toggleItemRemoving={this._toggleItemRemoving}
                 />
                 {(isItemCreating || isItemEditing) &&
                 <Modal>
@@ -466,6 +479,29 @@ class OrgStructure extends Component {
                             {buttonJSX}
                         </div>
                         {/*<LocationSearchInput/>*/}
+                    </div>
+                </Modal>
+                }
+
+                {isItemRemoving &&
+                <Modal>
+                    <div className="modal-content">
+                        <h1>
+                            Видалення структури
+                        </h1>
+                        <p>
+                            Ви дійсно бажаєте видалити орг структуру ?<br/>
+                            Дочірні структури також будуть видалені
+                        </p>
+
+                        <div className='modal-footer'>
+                            <button className='modal-button' onClick={() => {
+                                this._cancel();
+                                this._toggleItemRemoving();
+                            }
+                            }>Скасувати</button>
+                            <button className='modal-button' onClick={this._removeItem}>Видалити</button>
+                        </div>
                     </div>
                 </Modal>
                 }

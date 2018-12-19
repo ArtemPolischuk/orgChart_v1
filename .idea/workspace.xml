@@ -19,8 +19,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daabc2d3-da6e-405a-a733-542ab5546fcf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OrgItem/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrgItem/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrgItem/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrgItem/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OrgStructure/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrgStructure/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrgStructure/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrgStructure/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,20 +42,8 @@
       <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="77" column="1" selection-start-line="10" selection-end-line="77" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -58,8 +51,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OrgStructure/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6671">
-              <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
+            <state relative-caret-position="5997">
+              <caret line="506" column="17" selection-start-line="506" selection-start-column="17" selection-end-line="506" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -67,8 +60,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OrgItem/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+            <state relative-caret-position="-976">
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding>
                 <element signature="e#97#145#0" expanded="true" />
               </folding>
@@ -76,11 +69,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modal/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modal/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="32" column="21" selection-end-line="32" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OrgItem/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="172" column="17" lean-forward="true" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+            <state relative-caret-position="-724">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -88,8 +102,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OrgChart/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            <state relative-caret-position="756">
+              <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -103,32 +117,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OrgStructure/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="39" column="163" selection-start-line="39" selection-start-column="163" selection-end-line="39" selection-end-column="163" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LocSeacrh/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1188">
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -164,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/employees.svg" />
         <option value="$PROJECT_DIR$/src/dots.svg" />
         <option value="$PROJECT_DIR$/src/user.svg" />
-        <option value="$PROJECT_DIR$/src/components/Modal/index.css" />
         <option value="$PROJECT_DIR$/src/components/OrgItem/index2.css" />
         <option value="$PROJECT_DIR$/src/arrowDown2.svg" />
         <option value="$PROJECT_DIR$/src/arrowUp2.svg" />
@@ -172,16 +173,19 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/dots2.svg" />
-        <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/OrgStructure/helpers.js" />
         <option value="$PROJECT_DIR$/src/components/LocSeacrh/index.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/OrgStructure/index.js" />
         <option value="$PROJECT_DIR$/src/components/OrgChart/index.css" />
-        <option value="$PROJECT_DIR$/src/components/OrgItem/index.js" />
-        <option value="$PROJECT_DIR$/src/components/OrgStructure/index.css" />
         <option value="$PROJECT_DIR$/src/components/OrgItem/index.css" />
+        <option value="$PROJECT_DIR$/src/components/Notification/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Notification/index.css" />
+        <option value="$PROJECT_DIR$/src/components/OrgItem/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Modal/index.css" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/components/OrgStructure/index.css" />
+        <option value="$PROJECT_DIR$/src/components/OrgStructure/index.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -246,35 +250,7 @@
               <item name="testcra" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="LocationSearchInput" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testcra" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testcra" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Modal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testcra" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testcra" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="OrgChart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testcra" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testcra" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="OrgItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testcra" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testcra" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="OrgStructure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,18 +307,18 @@
       <workItem from="1541600007702" duration="1198000" />
       <workItem from="1542361789258" duration="1367000" />
       <workItem from="1544124549250" duration="115764000" />
-      <workItem from="1545083885148" duration="9865000" />
+      <workItem from="1545083885148" duration="16250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132889000" />
+    <option name="totallyTimeSpent" value="139274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12684989" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12684989" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -351,7 +327,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Quokka" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24839948" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24839948" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -562,23 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Modal/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Modal/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/OrgItem/index2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -617,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="77" column="1" selection-start-line="10" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LocSeacrh/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -644,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="39" column="163" selection-start-line="39" selection-start-column="163" selection-end-line="39" selection-end-column="163" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LocationSearchInput/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -668,41 +613,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OrgChart/index.css">
+    <entry file="file://$PROJECT_DIR$/src/components/Modal/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="432">
+          <caret line="32" column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OrgStructure/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Notification/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6671">
-          <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
+        <state relative-caret-position="342">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Notification/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OrgItem/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-724">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modal/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/OrgItem/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+        <state relative-caret-position="-976">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding>
             <element signature="e#97#145#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OrgStructure/index.css">
+    <entry file="file://$PROJECT_DIR$/src/components/OrgStructure/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="5997">
+          <caret line="506" column="17" selection-start-line="506" selection-start-column="17" selection-end-line="506" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OrgItem/index.css">
+    <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="172" column="17" lean-forward="true" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OrgStructure/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OrgChart/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
         </state>
       </provider>
     </entry>

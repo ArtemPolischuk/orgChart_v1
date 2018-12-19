@@ -17,6 +17,11 @@
     align-items: center;
 }
 
+.orgItem:hover > .orgItem-head > .orgItem-head-img {
+    border-radius: 22px;
+    box-shadow: 0 0 2px 1px #8757bf;
+}
+
 .orgItem-head-img {
     margin-right: 10px;
     width: 45px;
@@ -25,11 +30,6 @@
 
 .orgItem-head-img:hover + .orgItem-L {
     display: block;
-}
-
-#l {
-    top: 35px;
-    left: 35px;
 }
 
 .orgItem-head-info {
@@ -146,8 +146,10 @@
 .orgItem-L {
     pointer-events: none;
     padding: 20px;
-    left: -70px;
-    bottom: 0;
+    top: 35px;
+    left: 35px;
+    /*left: -70px;*/
+    /*bottom: 0;*/
     position: absolute;
     display: none;
     width: 444px;
