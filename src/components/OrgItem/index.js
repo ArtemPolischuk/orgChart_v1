@@ -48,16 +48,16 @@ export default (
                             <span className='orgItem-data'>{node.head.full_name}</span>
                         </div>
                         <div className="orgItem-L-info">
-                            <span className="orgItem-staticData">Адреса</span>
-                            <span className='orgItem-data'>{node.location}</span>
-                        </div>
-                        <div className="orgItem-L-info">
                             <span className="orgItem-staticData">Електронна адреса</span>
                             <span className='orgItem-data'>{node.head.email}</span>
                         </div>
                         <div className="orgItem-L-info">
                             <span className="orgItem-staticData">Телефон</span>
                             <span className='orgItem-data'>{node.head.phone}</span>
+                        </div>
+                        <div className="orgItem-L-info">
+                            <span className="orgItem-staticData">Адреса</span>
+                            <span className='orgItem-data'>{node.location.formatted_address}</span>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ export default (
                     додати
                 </span>
                 <span onClick={()=> {
-                    _setForEditing(node.id, node.name, node.type);
+                    _setForEditing(node.id, node.name, node.type, node.location);
                     _toggleItemEditing();
                 }}>
                     редагувати

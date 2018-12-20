@@ -25,9 +25,10 @@ export const implementItem = (value, obj, newItem) => {
         }
 };
 
-export const updateTreeItem = (value, obj, itemName, itemType) => {
+export const updateTreeItem = (value, obj, itemName, itemType, location) => {
     let escape = false;
-
+    console.log('location: ', location);
+    
     if(escape) {return}
     for (let prop in obj) {
         console.log('prop: ', prop, 'obj[prop]:', obj[prop]);
@@ -35,6 +36,10 @@ export const updateTreeItem = (value, obj, itemName, itemType) => {
             console.log('obj: ', obj);
             obj.name = itemName;
             obj.type = itemType;
+            obj.location = {
+                formatted_address: location.formatted_address,
+                place_id: location.place_id,
+            };
 
             console.log('obj: ', obj);
             escape = true;
@@ -42,7 +47,7 @@ export const updateTreeItem = (value, obj, itemName, itemType) => {
         } else {
             if(prop === 'children'){
                 console.log('here');
-                obj[prop].forEach(element => updateTreeItem(value, element, itemName, itemType));
+                obj[prop].forEach(element => updateTreeItem(value, element, itemName, itemType, location));
                 }
             }
         }

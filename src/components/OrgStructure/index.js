@@ -16,11 +16,12 @@ import './index.css';
 
 class OrgStructure extends Component {
     state = {
-        isNameEmpty: false,
-        isTypeEmpty: false,
-        isItemEditing: false,
+        isLocationEmpty: false,
         isItemCreating: false,
         isItemRemoving: false,
+        isItemEditing: false,
+        isNameEmpty: false,
+        isTypeEmpty: false,
         currentId: Number,
         currentName: '',
         itemName: '',
@@ -40,7 +41,10 @@ class OrgStructure extends Component {
             },
         ],
         itemType: '',
-        location: 'Kyivska 12, Kyiv, 011001',
+        location: {
+            formatted_address: '',
+            place_id: '',
+        },
         head: {
             full_name: "Випадкове ім'я",
             phone: '+38 099 925 52 12',
@@ -50,7 +54,10 @@ class OrgStructure extends Component {
         orgTree: {
             id: 100,
             name: "Головний департамент",
-            location: 'Kyivska 12, Kyiv, 011001',
+            location: {
+                formatted_address: 'Kyivska 12, Kyiv, 011001',
+                place_id: '',
+            },
             type: 'Управління',
             head: {
                 full_name: "Випадкове ім'я",
@@ -65,7 +72,10 @@ class OrgStructure extends Component {
                     id: 200,
                     parent: 100,
                     name: "Департамент 200",
-                    location: 'Kyivska 12, Kyiv, 011001',
+                    location: {
+                        formatted_address: 'Kyivska 12, Kyiv, 011001',
+                        place_id: '',
+                    },
                     type: 'Департамент',
                     head: {
                         full_name: "Випадкове ім'я",
@@ -80,7 +90,10 @@ class OrgStructure extends Component {
                             id: 210,
                             parent: 200,
                             name: "Відділ 201",
-                            location: 'Kyivska 12, Kyiv, 011001',
+                            location: {
+                                formatted_address: 'Kyivska 12, Kyiv, 011001',
+                                place_id: '',
+                            },
                             type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
@@ -95,7 +108,10 @@ class OrgStructure extends Component {
                             id  : 220,
                             parent: 200,
                             name: "Відділ 202",
-                            location: 'Kyivska 12, Kyiv, 011001',
+                            location: {
+                                formatted_address: 'Kyivska 12, Kyiv, 011001',
+                                place_id: '',
+                            },
                             type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
@@ -110,7 +126,10 @@ class OrgStructure extends Component {
                                     id: 221,
                                     parent: 220,
                                     name: "Відділ 221",
-                                    location: 'Kyivska 12, Kyiv, 011001',
+                                    location: {
+                                        formatted_address: 'Kyivska 12, Kyiv, 011001',
+                                        place_id: '',
+                                    },
                                     type: 'Відділ',
                                     head: {
                                         full_name: "Випадкове ім'я",
@@ -125,7 +144,10 @@ class OrgStructure extends Component {
                                     id: 222,
                                     parent: 220,
                                     name: "Відділ 222",
-                                    location: 'Kyivska 12, Kyiv, 011001',
+                                    location: {
+                                        formatted_address: 'Kyivska 12, Kyiv, 011001',
+                                        place_id: '',
+                                    },
                                     type: 'Відділ',
                                     head: {
                                         full_name: "Випадкове ім'я",
@@ -144,7 +166,10 @@ class OrgStructure extends Component {
                     id: 300,
                     parent: 100,
                     name: "Управління забезпечення перспективного розвитку ПЕК та координації будівництва об’єктів ПЕК",
-                    location: 'Kyivska 12, Kyiv, 011001',
+                    location: {
+                        formatted_address: 'Kyivska 12, Kyiv, 011001',
+                        place_id: '',
+                    },
                     type: 'Департамент',
                     head: {
                         full_name: "Випадкове ім'я",
@@ -159,7 +184,10 @@ class OrgStructure extends Component {
                             id: 310,
                             parent: 300,
                             name: "Відділ 310",
-                            location: 'Kyivska 12, Kyiv, 011001',
+                            location: {
+                                formatted_address: 'Kyivska 12, Kyiv, 011001',
+                                place_id: '',
+                            },
                             type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
@@ -174,7 +202,10 @@ class OrgStructure extends Component {
                             id: 320,
                             parent: 300,
                             name: "Відділ 320",
-                            location: 'Kyivska 12, Kyiv, 011001',
+                            location: {
+                                formatted_address: 'Kyivska 12, Kyiv, 011001',
+                                place_id: '',
+                            },
                             type: 'Відділ',
                             head: {
                                 full_name: "Випадкове ім'я",
@@ -191,7 +222,10 @@ class OrgStructure extends Component {
                     id: 400,
                     parent: 100,
                     name: "Департамент 400",
-                    location: 'Kyivska 12, Kyiv, 011001',
+                    location: {
+                        formatted_address: 'Kyivska 12, Kyiv, 011001',
+                        place_id: '',
+                    },
                     type: 'Департамент',
                     head: {
                         full_name: "Випадкове ім'я",
@@ -226,13 +260,14 @@ class OrgStructure extends Component {
         })
     };
 
-    _setForEditing = (id, name, type,) => {
-        console.log('id, name: ', id, name, type);
+    _setForEditing = (currentId, name, itemType, location) => {
+        console.log('id, name: ', currentId, name, itemType);
         this.setState({
             currentName: name,
             itemName: name,
-            itemType: type,
-            currentId: id,
+            itemType,
+            currentId,
+            location,
         })
     };
 
@@ -255,10 +290,10 @@ class OrgStructure extends Component {
         this.setState({ itemType: value });
     };
 
-    _handleLocation = (event) => {
-        const { value } = event.target;
-
-        this.setState({ location: value });
+    _handleItemLocation = (location) => {
+        console.log('location: ', location);
+        
+        this.setState({ location });
     };
 
     _handleHead = (event) => {
@@ -287,6 +322,11 @@ class OrgStructure extends Component {
             return null;
         } else { this.setState({isTypeEmpty: false}) }
 
+        if(!location.formatted_address.trim()) {
+            this.setState({isLocationEmpty: true});
+            return null;
+        } else {this.setState({isLocationEmpty: false})}
+
         const newItem = {
             id: Math.random(),
             parent: currentId,
@@ -301,6 +341,10 @@ class OrgStructure extends Component {
         
         implementItem(currentId, handleOrgTree, newItem);
         this.setState({
+            location: {
+                formatted_address: '',
+                place_id: '',
+            },
             orgTree: handleOrgTree,
             isNameEmpty: false,
             isTypeEmpty: false,
@@ -319,11 +363,18 @@ class OrgStructure extends Component {
                   itemName,
                   itemType,
                   orgTree,
+                  location,
               } = this.state;
         const handleOrgTree = {...orgTree};
 
-        updateTreeItem(currentId, handleOrgTree, itemName, itemType);
+        console.log('location: ', location);
+        
+        updateTreeItem(currentId, handleOrgTree, itemName, itemType, location);
         this.setState({
+            location: {
+                formatted_address: '',
+                place_id: '',
+            },
             orgTree: handleOrgTree,
             currentName: '',
             currentId: '',
@@ -349,6 +400,10 @@ class OrgStructure extends Component {
 
     _cancel = () => {
         this.setState({
+            location: {
+                formatted_address: '',
+                place_id: '',
+            },
             isItemEditing: false,
             isItemCreating: false,
             isTypeEmpty: false,
@@ -381,6 +436,7 @@ class OrgStructure extends Component {
 
     render() {
         const {
+                  isLocationEmpty,
                   isItemCreating,
                   isItemRemoving,
                   isItemEditing,
@@ -453,14 +509,12 @@ class OrgStructure extends Component {
                             </select>
                         </div>
                         <div className='modal-input-wrapper'>
+                            {isLocationEmpty && <span>Виберить адресу</span>}
                             <label htmlFor="itemLocation">Адреса</label>
-                            <input
-                                type="text"
+                            <LocationSearchInput
+                                _handleItemLocation={this._handleItemLocation}
+                                location={location}
                                 id="itemLocation"
-                                value={location}
-                                disabled
-                                className='modal-input'
-                                onChange={this._handleLocation}
                             />
                         </div>
                         <div className='modal-input-wrapper'>
@@ -474,11 +528,12 @@ class OrgStructure extends Component {
                                 onChange={this._handleHead}
                             />
                         </div>
+
                         <div className='modal-footer'>
                             <button className='modal-button' onClick={this._cancel}>Скасувати</button>
                             {buttonJSX}
                         </div>
-                        {/*<LocationSearchInput/>*/}
+
                     </div>
                 </Modal>
                 }

@@ -1,6 +1,9 @@
 import React from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 
+// Styles
+import './index.css';
+
 import {
     geocodeByAddress,
     geocodeByPlaceId,
@@ -10,7 +13,7 @@ import {
 class LocationSearchInput extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { address: '' };
+        this.state = { address: this.props.location.formatted_address };
     }
 
     handleChange = address => {
@@ -19,8 +22,13 @@ class LocationSearchInput extends React.Component {
 
     handleSelect = address => {
         geocodeByAddress(address)
-            .then(results => getLatLng(results[0]))
-            .then(latLng => console.log('Success', latLng))
+            .then(results =>  results[0])
+            // .then(results => getLatLng(results[0]))
+            .then(({formatted_address, place_id}) => {
+                console.log('formatted_address: ', formatted_address, 'place_id : ', place_id)
+                this.props._handleItemLocation({formatted_address,place_id});
+                this.setState({address: formatted_address})
+            } )
             .catch(error => console.error('Error', error));
     };
 
@@ -32,7 +40,7 @@ class LocationSearchInput extends React.Component {
                 onSelect={this.handleSelect}
             >
                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                    <div>
+                    <div className='wrapper'>
                         <input
                             {...getInputProps({
                                 placeholder: 'Search Places ...',

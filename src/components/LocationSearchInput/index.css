@@ -1,0 +1,27 @@
+.wrapper {
+    padding: .375rem .75rem;
+    position: relative;
+    width: 65%;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    border: 1px solid #cfcfcf;
+    /*appearance: none;*/
+}
+
+.location-search-input {
+    width: 100%;
+    background-color: inherit;
+    outline: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: none;
+
+}
+
+.autocomplete-dropdown-container {
+    position: absolute;
+    z-index: 2;
+}
